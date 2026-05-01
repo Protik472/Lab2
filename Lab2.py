@@ -1,15 +1,14 @@
-def calculate_bmi(height, weight):
-    print("Height = " + str(height))
-    print("Weight = " + str(weight))
-    bmi = weight / (height * height)
-    print(f'Your BMI is: {bmi:.2f}')
+def main():
+    print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
+    display_main_menu()
     
-    # Conditional logic for BMI classification
-    if bmi < 18.5:
-        print("Classification: Under Weight")
-    elif bmi >= 18.5 and bmi <= 25.0:
-        print("Classification: Normal Weight")
-    else:
-        print("Classification: Over Weight")
-
-calculate_bmi(weight=57.0, height=1.73)
+    # Get the list of floats from the user
+    num_list = get_user_input()
+    
+    # Calculate average, min, and max
+    average = calc_average_temperature(num_list)
+    min_max_list = calc_min_max_temperature(num_list)
+    
+    # Display the results
+    print("The average temperature is: " + str(average))
+    print("The minimum and maximum temperatures are: " + str(min_max_list))
